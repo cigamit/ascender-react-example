@@ -1,0 +1,8 @@
+- name: Remove Package
+  hosts: all
+  tasks:
+    - name: Remove Package {{ package }}
+      ansible.builtin.package:
+        name: "{{ package }}"
+        state: absent
+    
