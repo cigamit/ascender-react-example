@@ -6,4 +6,6 @@
       ansible.builtin.package:
         name: "{{ package }}"
         state: absent
-    
+    - name: Gather package facts
+      ansible.builtin.package_facts:
+        manager: auto
