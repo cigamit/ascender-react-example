@@ -9,12 +9,12 @@
     - ansible.eda.insert_hosts_to_meta:
         host_path: "payload.host"
   rules:
-  - name: Rules to process the web
-    condition: event.payload is defined
-    action:
-      run_job_template:
-        name: Remove Package
-        organization: Default
-        job_args:
-          extra_vars:
-            package: "{{ event.payload.package.name }}"
+    - name: Rules to process the web
+      condition: event.payload is defined
+      action:
+        run_job_template:
+          name: Remove Package
+          organization: Default
+          job_args:
+            extra_vars:
+              package: "{{ event.payload.package.name }}"
