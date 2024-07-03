@@ -1,5 +1,5 @@
 - name: Listen to Events
-  hosts: localhost
+  hosts: all
   sources:
     - name: Listen to the Host and Port
       ansible.eda.webhook:
